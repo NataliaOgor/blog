@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="header">
+  <h1><%= link_to "Rails-blog", root_path %></h1>
+  <div id = "user_bar">
+    <%= link_to "New Article", new_article_path %>
+    <%= link_to "New User", new_user_path %>
+  </div>
+</div>
 
-<%= yield %>
+<div id="main">
+  <%= content_tag(:p, notice, :class => "notice") if notice.present? %>
+  <%= content_tag(:p, alert, :class => "alert")if alert.present? %>
+  <%= yield %>
+</div>
+
+<div id="footer">
+  A simple blog built in the night with love to Rails...
+</div>
 
 </body>
 </html>

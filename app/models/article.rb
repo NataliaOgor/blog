@@ -1,8 +1,12 @@
 class Article < ActiveRecord::Base
-  validates_presence_of :title, :message => "Please, give your article a name!"
-  validates_presence_of :body, :message => "You should write something to post!"
+  validates_presence_of :title, :message => "can't be blank"
+  validates_presence_of :body, :message => "can't be blank"
 
-  has_many :comments
   belongs_to :user
   has_and_belongs_to_many :categories
+  has_many :comments
+
+  def published?
+    published_at.present?
+  end
 end

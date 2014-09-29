@@ -1,28 +1,12 @@
-== README
+Creating a simple blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To create models for: User, Article, Comment, Category.
 
-Things you may want to cover:
+User has many articles.
+Article has and belongs to many Categories, has many Comments, belongs to User.
+Comment belongs to Article.
+Category has and belongs to many Articles
 
-* Ruby version
+Controllers should do CRUD
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Use partials for forms.

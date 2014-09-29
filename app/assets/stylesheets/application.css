@@ -9,7 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ * #981a21 - red
  *= require_tree .
  *= require_self
  */
@@ -17,11 +17,98 @@
     margin: 0 auto;
 }
 
+body {
+    font-family: arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    background-color: #F6E69F;
+}
+
+p {
+    padding: 0.3em;
+}
+
+a {
+    color: #981a21;
+    padding: 0.1em;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #981a21;
+    color: #fff;
+}
+
+.notice { color: green; }
+.alert { color: red; }
+
 #header, #main, #footer {
     width: 60em;
     padding: 1em;
+    background-color: #fff;
+}
+
+#header {
+    font-family: verdana, arial, helvetica, sans-serif;
+    letter-spacing: .1em;
+    margin-top: 2em;
+    border-bottom: 5px solid #000;
+    padding-bottom: 3em;
+}
+
+#header h1 {
+    float: left
 }
 
 #user_bar {
     float: right;
+}
+
+#footer {
+    border: 1px solid #000000;
+    clear: both;
+    text-align: center;
+    font-size: .7em;
+    width: 87em
+}
+
+#main h1 {
+    font-size: 2em;
+    padding: 10px 0 10px 2px;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: .5em;
+}
+
+#main .back {
+    text-align: center;
+}
+
+#main form{
+    text-align: left;
+}
+
+#main form textarea {
+    height: 10em;
+    width: 15em;
+}
+
+#main h3 {
+    padding-top: 1em;
+}
+#main h3 .actions{
+    font-weight: normal;
+    font-size: .8em;
+}
+
+#main .comment {
+    width: 20em;
+    background-color: #fcf7e2;
+    border-radius: 20px;
+    padding: 1em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+#error_container {
+    color: red;
 }
